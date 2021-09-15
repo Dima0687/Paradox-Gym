@@ -36,17 +36,22 @@ body {
     width: 40%;
 }
 
+.countdown {
+    width: 60%;
+}
+
 .logo {
     width: 275px;
     margin-top: 15px;
     margin-left: 15px;
 }
 .main-offer {
-    margin: 75px 15px;
+    display: flex;
+    margin: 75px 15px 75px 75px;
 }
 
 .main-heading {
-    margin: 0 0 0 60px;
+    margin: 0;
     font-size: 1.8em;
     font-style: italic;
     font-weight: normal;
@@ -60,4 +65,42 @@ body {
     font-size: 7em;
     display: block;
     margin-top: 18px;
+}
+
+.join {
+    background-color: black;
+    color: white;
+    border-radius: 10000px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 140px;
+    margin: 40px 0 100px;
+    display: inline-block;
+    font-size: 1.4em;
+}
+.join:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+.footer-paragraph {
+    margin: 0 15px;
+}
+
+.countdown-heading {
+    margin: 150px 0 0 0;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.8em;
+    letter-spacing: .14em;
+}
+
+.countdown-paragraph {
+    margin: 0;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-size: 5em;
 }
