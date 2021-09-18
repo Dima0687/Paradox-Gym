@@ -12,7 +12,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(100, 100, 100);
     background-image:
-    linear-gradient(90deg, rgb(226,29,60) 40%, rgba(0, 0, 0, .5) 40%, transparent 45%), 
+    linear-gradient(101.31deg, rgb(226,29,60) 50%, rgba(0, 0, 0, .5) 50%, transparent 55%), 
     url("../images/waves-cropped.svg"), 
     linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .5) 100%), url("../images/pexels-cesar-galeao-3289711-gray.jpg");
     background-repeat:
@@ -20,47 +20,66 @@ body {
         no-repeat,
         no-repeat, 
         no-repeat;
+    
+    background-attachment: 
+        fixed,
+        fixed,
+        fixed,
+        fixed;
+
     background-size: 
         100% 100%,
         40% auto,
         100% 100%, 
-        60% auto;
+        calc(50% + 20vh) auto;
     background-position: 
-        50% 50%,
+        -10vh 50%,
         100% 100%,
         50% 50%,
         100% 25%;
 }
 
 .main-content {
-    width: 40%;
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .countdown {
-    width: 60%;
+    flex: 0 1 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .logo {
     width: 275px;
     margin-top: 15px;
     margin-left: 15px;
+    justify-content: flex-start;
 }
+
 .main-offer {
     display: flex;
-    margin: 75px 15px 75px 75px;
+    margin: 0;
+    min-height: 80vh;
 }
 
 .main-heading {
-    margin: 0;
+    margin: 0 50px 0 50px;
     font-size: 1.8em;
     font-style: italic;
     font-weight: normal;
     color: white;
     letter-spacing: .14em;
 }
+
 .main-heading>strong {
     text-transform: uppercase;
 }
+
 .main-offer-price {
     font-size: 7em;
     display: block;
@@ -74,20 +93,22 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     padding: 10px 140px;
-    margin: 40px 0 100px;
+    margin: 40px 0 0;
     display: inline-block;
     font-size: 1.4em;
 }
+
 .join:hover {
     background-color: rgb(50, 50, 50);
 }
 
 .footer-paragraph {
-    margin: 0 15px;
+    justify-content: flex-end;
+    margin: 15px 15px 60px;
 }
 
 .countdown-heading {
-    margin: 150px 0 0 0;
+    margin: 0;
     color: white;
     text-align: center;
     text-transform: uppercase;
