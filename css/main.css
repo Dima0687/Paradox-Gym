@@ -1,18 +1,30 @@
-* {
+* 
+{
     box-sizing: border-box;
 }
 
-html, body {
-    min-height: 100%;
+html 
+{
+    font-size: 0.625em;
+}
+
+html, 
+body 
+{
+    display: flex;
     margin: 0;
+    min-height: 100vh;
+    flex-direction: column;
     padding: 0;
 }
 
-body {
+body 
+{
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
     background-color: rgb(100, 100, 100);
     background-image:
-    linear-gradient(90deg, rgb(226,29,60) 40%, rgba(0, 0, 0, .5) 40%, transparent 45%), 
+    linear-gradient(101.31deg, rgb(226,29,60) 50%, rgba(0, 0, 0, .5) 50%, transparent 55%), 
     url("../images/waves-cropped.svg"), 
     linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .5) 100%), url("../images/pexels-cesar-galeao-3289711-gray.jpg");
     background-repeat:
@@ -20,44 +32,200 @@ body {
         no-repeat,
         no-repeat, 
         no-repeat;
+    
+    background-attachment: 
+        fixed,
+        fixed,
+        fixed,
+        fixed;
+
     background-size: 
         100% 100%,
         40% auto,
         100% 100%, 
-        60% auto;
+        calc(50% + 20vh) auto;
+
     background-position: 
-        50% 50%,
+        -10vh 50%,
         100% 100%,
         50% 50%,
         100% 25%;
 }
 
-.main-content {
-    width: 40%;
+.countdown,
+.main-content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.logo {
-    width: 275px;
-    margin-top: 15px;
-    margin-left: 15px;
-}
-.main-offer {
-    margin: 75px 15px;
+.main-content 
+{
+    flex: 1 0 40%;
+    align-items: center;
 }
 
-.main-heading {
-    margin: 0 0 0 60px;
+.countdown 
+{
+    flex: 0 1 60%;
+}
+
+.logo 
+{
+    width: 27.5rem;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    justify-content: flex-start;
+}
+
+.main-offer 
+{
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.main-heading 
+{
+    margin: 0 5rem 0 5rem;
     font-size: 1.8em;
     font-style: italic;
     font-weight: normal;
     color: white;
     letter-spacing: .14em;
 }
-.main-heading>strong {
+
+.main-heading>strong 
+{
     text-transform: uppercase;
 }
-.main-offer-price {
+
+.main-offer-price 
+{
     font-size: 7em;
     display: block;
-    margin-top: 18px;
+    margin-top: 1.8rem;
+}
+
+.join 
+{
+    background-color: black;
+    color: white;
+    border-radius: 10000px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 14.0rem;
+    margin: 4rem 0 0;
+    display: inline-block;
+    font-size: 1.4em;
+}
+
+.join:hover 
+{
+    background-color: rgb(50, 50, 50);
+}
+
+header,
+footer 
+{
+    min-height: 10vh;
+}
+
+.footer-paragraph 
+{
+    justify-content: flex-end;
+    margin: 1.5rem 1.5rem 5rem;
+}
+
+.countdown-heading 
+{
+    margin: 0;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.8em;
+    letter-spacing: .14em;
+}
+
+.countdown-paragraph 
+{
+    margin: 0;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-size: 5em;
+}
+
+
+/*Desktop start*/
+@media (min-width: 125em){
+    html {
+        font-size: 0.692em;
+    }
+}
+@media (min-width: 137.5em){
+    html {
+        font-size: 0.78em;
+    }
+}
+@media (min-width: 150em){
+    html {
+        font-size: 0.83em;
+    }
+}
+@media (min-width: 168.75em){
+    html {
+        font-size: 0.93em;
+    }
+}
+@media (min-width: 225em){
+    html {
+        font-size: 1.25em;
+    }
+}
+@media (min-width: 337.5em){
+    html {
+        font-size: 1.825em;
+    }
+}
+@media (min-width: 456.25em){
+    html {
+        font-size: 2.4em;
+    }
+}/*Dekstop end*/
+
+
+@media (max-width: 90.625em) {
+    html {
+        font-size: 0.6em;
+    }
+
+    .main-offer {
+        flex-direction: column;
+    }
+
+    body {
+        background-color: rgb(226,29,60);
+        background-image: url(../images/waves-white-cropped.svg);
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+        background-size: 30vw auto;
+    }
+
+    .main-content {
+        margin: 5rem 0 5rem 0;
+    }
+    
+    .logo {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media (max-width: 45em) {
+    html {
+        font-size: 0.3em;
+    }
 }
